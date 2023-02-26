@@ -1,4 +1,4 @@
-﻿using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -71,7 +71,7 @@ namespace AnantToDoBot.Utilities
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
-            QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
+            QueryDefinition queryDefinition = new(sqlQueryText);
             FeedIterator<ToDoTask> queryResultSetIterator = this.container.GetItemQueryIterator<ToDoTask>(queryDefinition);
 
             while (queryResultSetIterator.HasMoreResults)
@@ -92,11 +92,8 @@ namespace AnantToDoBot.Utilities
 
         public async Task<int> AddItemsToContainerAsync(string userId, string task)
         {
-            ToDoTask todotask = new ToDoTask
-            {
-                Id = userId,
-                Task = task,
-            };
+            ToDoTask todotask = new()
+{Id = userId, Task = task, };
 
             try
             {
@@ -128,7 +125,7 @@ namespace AnantToDoBot.Utilities
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
-            QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
+            QueryDefinition queryDefinition = new(sqlQueryText);
             FeedIterator<ToDoTask> queryResultSetIterator = this.container.GetItemQueryIterator<ToDoTask>(queryDefinition);
 
             List<ToDoTask> todoTasks = new List<ToDoTask>();
@@ -151,7 +148,7 @@ namespace AnantToDoBot.Utilities
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
-            QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
+            QueryDefinition queryDefinition = new(sqlQueryText);
             FeedIterator<ToDoTask> queryResultSetIterator = this.container.GetItemQueryIterator<ToDoTask>(queryDefinition);
 
             List<ToDoTask> todoTasks = new List<ToDoTask>();
