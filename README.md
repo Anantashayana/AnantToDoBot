@@ -4,7 +4,6 @@ Bot Framework v4 core bot sample.
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to:
 
-- Use [LUIS](https://www.luis.ai) to implement core AI capabilities
 - Implement a multi-turn conversation using Dialogs
 - Handle user interruptions for such things as `Help` or `Cancel`
 - Prompt for and validate requests for information from the user
@@ -13,9 +12,7 @@ This bot has been created using [Bot Framework](https://dev.botframework.com), i
 
 This sample **requires** prerequisites in order to run.
 
-### Overview
 
-This bot uses [LUIS](https://www.luis.ai), an AI based cognitive service, to implement language understanding.
 
 ### Install .NET Core CLI
 
@@ -97,3 +94,5 @@ To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](htt
 - [Azure Portal](https://portal.azure.com)
 - [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
 - [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
+
+- 
